@@ -22,7 +22,7 @@
         :icon="sygnet"
         :height="35"
       /> -->
-      <h4 class="sidebar-brand-full h4">SIMARen</h4>
+      <h4 class="sidebar-brand-full h4">SIMA PKAU</h4>
       <h6 class="sidebar-brand-narrow h6">BPKP</h6>
     </CSidebarBrand>
     <AppSidebarNav />

@@ -1,7 +1,7 @@
 <template>
   <div class="flex lg:w-full h-screen justify-center">
     <div
-      class="img-login hidden lg:block lg:w-2/6 bg-gradient-to-tr from-green-500 to-blue-500"
+      class="img-login hidden lg:block lg:w-2/6 bg-gradient-to-tr from-indigo-500 to-blue-500"
     >
       <div class="flex flex-col px-8 h-full text-white justify-center">
         <!-- <h1 class="text-4xl text-center">SIMHPNAS</h1> -->
@@ -10,9 +10,12 @@
             class="inline-block w-52 lg:w-64 mb-2"
             src="img/simhp/logo-white-login.svg"
           /> -->
-          <h2 class="text-left h2 text-xl lg:text-4xl tracking-wide">
-            SIMA-Ren
-          </h2>
+          <div class="text-left tracking-wide">
+            <h2 class="h2 text-4xl mb-2">SIMA PKAU</h2>
+            <p class="text-lg font-light">
+              Badan Pengawasan Keuangan dan Pembangunan
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -27,7 +30,7 @@
               class="inline-block h-12 mr-2"
               src="img/simhp/logo-color-login.svg"
             /> -->
-            <h3 class="text-2xl font-light tracking-wider">SIMARen BPKP</h3>
+            <h3 class="text-2xl font-light tracking-wider">SIMA PKAU BPKP</h3>
           </div>
 
           <p class="text-3xl leading-normal tracking-wide font-normal mb-4">
@@ -39,12 +42,14 @@
             @submit.prevent="submitForm"
           >
             <p class="mb-3 tracking-wide">
-              Silahkan login menggunakan user MAP BPKP
+              Silahkan login menggunakan akun warga BPKP
             </p>
             <div class="flex flex-wrap mb-4">
               <div class="w-full">
                 <div class="flex mb-3">
-                  <CFormLabel for="tahun" class="col-sm-2 col-form-label"
+                  <CFormLabel
+                    for="tahun"
+                    class="col-sm-2 mr-4 lg:mr-0 col-form-label"
                     >Pilih Tahun</CFormLabel
                   >
                   <div class="col-sm-5">
@@ -80,7 +85,7 @@
               </div>
             </div>
             <button
-              class="rounded-lg appearance-none block w-full bg-blue-500 text-white py-3 px-4 leading-tight hover:bg-blue-600"
+              class="rounded-lg appearance-none block w-full bg-blue-500 text-white py-3 px-4 leading-tight hover:bg-indigo-500"
               type="submit"
               placeholder="password"
             >
