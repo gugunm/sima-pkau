@@ -1,7 +1,7 @@
 <template>
   <Loading v-model:active="loading" :is-full-page="true" />
   <div class="mb-4">
-    <h4 class="h4">PKPT</h4>
+    <h4 class="h4">PKAU</h4>
   </div>
   <div>
     <div class="flex flex-wrap lg:flex-row-reverse">
@@ -11,7 +11,7 @@
         <button
           v-if="$func.isNipAllowToAdd()"
           class="text-sm rounded-md tracking-wide bg-green-600 text-white h-10 px-5 hover:bg-green-700 focus:bg-green-700 focus:outline-none"
-          @click="$router.push('/pkpt/create')"
+          @click="$router.push('/pkau/create')"
         >
           Tambah
         </button>
@@ -53,7 +53,7 @@
             variant="outline"
             @click="
               $router.push({
-                name: 'Update PKPT',
+                name: 'Update PKAU',
                 params: { idPkpt: props.row.idPkpt },
               })
             "
@@ -122,13 +122,13 @@ const columns = [
     tdClass: 'text-sm',
   },
   {
-    label: 'Unit Kerja PKPT',
+    label: 'Unit Kerja PKAU',
     field: 'namaUnitKerjaPkpt',
     thClass: 'text-sm',
     tdClass: 'text-sm',
   },
   {
-    label: 'Nama PKPT',
+    label: 'Nama PKAU',
     field: 'namaPkpt',
     thClass: 'text-sm',
     tdClass: 'text-sm',

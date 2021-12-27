@@ -7,8 +7,8 @@ export default [
   },
   {
     component: 'CNavItem',
-    name: 'PKPT',
-    to: '/pkpt',
+    name: 'PKAU',
+    to: '/pkau',
     icon: 'cil-control',
   },
   {

@@ -164,8 +164,8 @@ const routes = [
         ],
       },
       {
-        path: '/pkpt',
-        name: 'PKPT',
+        path: '/pkau',
+        name: 'PKAU',
         component: {
           render() {
             return h(resolveComponent('router-view'))
@@ -180,13 +180,13 @@ const routes = [
           },
           {
             path: 'create',
-            name: 'Create PKPT',
+            name: 'Create PKAU',
             component: () => import('@/views/modules/pkpt/Create.vue'),
             meta: { requiresAuth: true, restricted: false },
           },
           {
             path: 'update/:idPkpt',
-            name: 'Update PKPT',
+            name: 'Update PKAU',
             component: () => import('@/views/modules/pkpt/Update.vue'),
             meta: { requiresAuth: true, restricted: false },
             props: true,

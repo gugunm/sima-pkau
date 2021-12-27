@@ -2,8 +2,8 @@
   <Loading v-model:active="loading" :is-full-page="true" />
   <CCard class="mb-4">
     <CCardBody class="p-4">
-      <h4 v-if="mode == 'create'" class="h4 mb-4">Tambah PKPT</h4>
-      <h4 v-else-if="mode == 'update'" class="h4 mb-4">Edit PKPT</h4>
+      <h4 v-if="mode == 'create'" class="h4 mb-4">Tambah PKAU</h4>
+      <h4 v-else-if="mode == 'update'" class="h4 mb-4">Edit PKAU</h4>
       <CForm>
         <CRow class="mb-2">
           <CFormLabel for="nama-kap" class="col-sm-3 col-form-label"
@@ -64,7 +64,7 @@
               @click="isOpenForm = !isOpenForm"
               variant="outline"
             >
-              + PKPT
+              + PKAU
             </CButton>
           </div>
         </CRow>
@@ -103,7 +103,7 @@
           </CRow>
           <CRow class="mb-2">
             <CFormLabel for="nama-pkpt" class="col-sm-3 col-form-label"
-              >Nama PKPT<span class="text-red-500">*</span></CFormLabel
+              >Nama PKAU<span class="text-red-500">*</span></CFormLabel
             >
             <div class="col-sm-9">
               <CFormTextarea
@@ -246,9 +246,9 @@
                 @click="submit"
               >
                 <div v-if="loading">
-                  <CSpinner color="white" size="sm" class="mr-2" /> Simpan PKPT
+                  <CSpinner color="white" size="sm" class="mr-2" /> Simpan PKAU
                 </div>
-                <span v-else>Simpan PKPT</span>
+                <span v-else>Simpan PKAU</span>
               </CButton>
             </div>
           </CRow>
@@ -268,7 +268,7 @@
                         scope="col"
                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                       >
-                        Nama PKPT
+                        Nama PKAU
                       </th>
                       <th
                         scope="col"
@@ -338,7 +338,7 @@
               v-if="mode != 'view'"
               variant="outline"
               color="dark"
-              @click="$router.push('/pkpt')"
+              @click="$router.push('/pkau')"
               class="px-5"
             >
               Batal
@@ -375,9 +375,9 @@
               @click="submit"
             >
               <div v-if="loading">
-                <CSpinner color="white" size="sm" class="mr-2" /> Ubah PKPT
+                <CSpinner color="white" size="sm" class="mr-2" /> Ubah PKAU
               </div>
-              <p v-else>Ubah PKPT</p>
+              <p v-else>Ubah PKAU</p>
             </CButton>
           </CCol>
         </CRow>
@@ -708,11 +708,11 @@ export default {
       if (this.pkpts.length > 0) {
         // this.loading = true
         setTimeout(() => {
-          this.$router.push('/pkpt')
-          this.toastSuccess('Berhasil membuat PKPT')
+          this.$router.push('/pkau')
+          this.toastSuccess('Berhasil membuat PKAU')
         }, 500)
       } else {
-        this.toastWarning('Selesaikan dahulu pembuatan PKPT')
+        this.toastWarning('Selesaikan dahulu pembuatan PKAU')
       }
     },
 
@@ -771,7 +771,7 @@ export default {
               this.error = 'Gagal merubah data'
             } else {
               this.loading = false
-              this.$router.push('/pkpt')
+              this.$router.push('/pkau')
               this.toastSuccess('Berhasil merubah data')
             }
           }
@@ -868,7 +868,7 @@ export default {
         this.editData = await response.data
 
         if (response.status == 200) {
-          // console.log('DETAIL PKPT')
+          // console.log('DETAIL PKAU')
           // console.log(this.editData)
 
           this.idKap = this.editData.idKap

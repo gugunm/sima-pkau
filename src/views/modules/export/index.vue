@@ -100,7 +100,7 @@ export default {
         },
         {
           id: 6,
-          deskripsi: 'PKPT',
+          deskripsi: 'PKAU',
         },
       ],
       selectedUnitKerja: null,

@@ -816,13 +816,13 @@ export default {
           alignment: 'center',
         },
         {
-          text: 'Unit Kerja PKPT',
+          text: 'Unit Kerja PKAU',
           fontSize: 10,
           bold: true,
           alignment: 'center',
         },
         {
-          text: 'Nama PKPT',
+          text: 'Nama PKAU',
           fontSize: 10,
           bold: true,
           alignment: 'center',

@@ -202,8 +202,8 @@ export default {
         'Nama KAP': 'namaKap',
         'PJ KAP': 'namaUnitKerjaKap',
         'Rendal Pelaporan': 'namaRendalPelaporan',
-        'Unit Kerja PKPT': 'namaUnitKerjaPkpt',
-        'Nama PKPT': 'namaPkpt',
+        'Unit Kerja PKAU': 'namaUnitKerjaPkpt',
+        'Nama PKAU': 'namaPkpt',
         'Bidang Pengawasan': 'namaBidwasPkpt',
         'TW Pelaporan Kontributor': 'triwulan',
       }
