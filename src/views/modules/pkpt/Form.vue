@@ -404,6 +404,14 @@ const optionsDana = [
     id: 1518,
     deskripsi: 'ABT',
   },
+  {
+    id: 1519,
+    deskripsi: 'PLN STAR-AF',
+  },
+  {
+    id: 1520,
+    deskripsi: 'MDTF',
+  },
 ]
 
 const optionsRmp = [
