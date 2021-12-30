@@ -60,6 +60,7 @@
               track-by="namaTopik"
               deselectLabel=""
               selectLabel=""
+              :custom-label="viewSelectTopik"
             >
             </VueMultiselect>
             <CButton
@@ -261,6 +262,10 @@ export default {
   methods: {
     viewSelectSearch({ alias, deskripsi }) {
       return `${alias} - ${deskripsi}`
+    },
+
+    viewSelectTopik({ namaTopik, namaSektor, namaUnitKerja }) {
+      return `${namaTopik} - ${namaSektor} - ${namaUnitKerja}`
     },
 
     addTopik(idTopik) {

@@ -116,14 +116,14 @@
           </CRow>
           <CRow class="mb-2">
             <CFormLabel for="bidwas" class="col-sm-3 col-form-label"
-              >BIDWAS<span class="text-red-500">*</span></CFormLabel
+              >Bagian/Bidang<span class="text-red-500">*</span></CFormLabel
             >
             <div class="col-sm-9">
               <VueMultiselect
                 id="bidwas"
                 v-model="selectedBidwas"
                 :options="optionsBidwas"
-                placeholder="Pilih Bidwas"
+                placeholder="Pilih Bidang/Bagian"
                 label="namaBidwas"
                 track-by="namaBidwas"
               >
@@ -132,21 +132,22 @@
           </CRow>
           <CRow class="mb-2">
             <CFormLabel for="info-pkpt" class="col-sm-3 col-form-label"
-              >Informasi Yang Diharapkan<span class="text-red-500"
+              >Hasil Yang Diharapkan<span class="text-red-500"
                 >*</span
               ></CFormLabel
             >
             <div class="col-sm-9">
               <CFormTextarea
+                class="text-sm"
                 id="info-pkpt"
                 rows="3"
-                v-model="infoDiharapkanPkpt"
-                readonly
+                v-model="form.infoYangDiharapkan"
                 required
               ></CFormTextarea>
+              <!-- readonly -->
             </div>
           </CRow>
-          <CRow class="mb-2" v-if="isUnitPkptPerwakilan || isSektorAppd">
+          <!-- <CRow class="mb-2" v-if="isUnitPkptPerwakilan || isSektorAppd">
             <CFormLabel for="rendal-pelaporan" class="col-sm-3 col-form-label"
               >Rendal Pelaporan<span class="text-red-500">*</span></CFormLabel
             >
@@ -164,7 +165,7 @@
               >
               </VueMultiselect>
             </div>
-          </CRow>
+          </CRow> -->
           <CRow class="mb-2">
             <CFormLabel for="hp" class="col-sm-3 col-form-label"
               >HP <span class="text-red-500">*</span></CFormLabel
@@ -831,6 +832,8 @@ export default {
         namaBidwasPkpt: null,
         namaUnitKerja: null,
         namaSumberDana: null,
+
+        infoYangDiharapkan: null,
       }
     },
 
@@ -857,6 +860,8 @@ export default {
       fd.append('namaRmp', this.form.namaRmp)
       fd.append('peranPkpt', this.form.peranPkpt)
       fd.append('idTopikOrKontributor', this.form.idTopikOrKontributor)
+
+      fd.append('infoYangDiharapkan', this.form.infoYangDiharapkan) //infooo
 
       fd.append('nip', localStorage.getItem('nip'))
       return fd
@@ -898,6 +903,9 @@ export default {
             idRmp: this.editData.idRmp,
             triwulan: this.editData.triwulan,
             idRendPelaporan: this.editData.idRendalPelaporan,
+
+            infoYangDiharapkan: this.editData.infoYangDiharapkan, //infoo
+
             //auto pas milih id
             // namaBidwasPkpt: null,
             // namaUnitKerja: null,

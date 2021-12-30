@@ -11,8 +11,8 @@
             src="img/simhp/logo-white-login.svg"
           /> -->
           <div class="text-left tracking-wide">
-            <h2 class="h2 text-4xl mb-2">SIMA PKAU</h2>
-            <p class="text-lg font-light">
+            <h2 class="h2 text-4xl mb-2">SIMAREN PKAU</h2>
+            <p class="text-base font-light">
               Badan Pengawasan Keuangan dan Pembangunan
             </p>
           </div>
@@ -30,7 +30,9 @@
               class="inline-block h-12 mr-2"
               src="img/simhp/logo-color-login.svg"
             /> -->
-            <h3 class="text-2xl font-light tracking-wider">SIMA PKAU BPKP</h3>
+            <h3 class="text-2xl font-light tracking-wider">
+              SIMAREN PKAU BPKP
+            </h3>
           </div>
 
           <p class="text-3xl leading-normal tracking-wide font-normal mb-4">

@@ -217,7 +217,7 @@ export default {
           ...data,
           namaRendalPelaporan: data.namaRendalPelaporan
             ? data.namaRendalPelaporan
-            : data.namaUnitKerjaPkpt,
+            : '-',
         }
       })
 

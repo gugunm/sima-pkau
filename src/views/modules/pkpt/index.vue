@@ -70,13 +70,13 @@
             >Hapus</CButton
           >
         </template>
-        <template v-if="props.column.field == 'namaRendalPelaporan'">
+        <!-- <template v-if="props.column.field == 'namaRendalPelaporan'">
           {{
             props.row.namaRendalPelaporan
               ? props.row.namaRendalPelaporan
               : props.row.namaUnitKerjaPkpt
           }}
-        </template>
+        </template> -->
         <span v-else>
           {{ props.formattedRow[props.column.field] }}
         </span>
@@ -115,12 +115,12 @@ const columns = [
     thClass: 'text-sm',
     tdClass: 'text-sm',
   },
-  {
-    label: 'Rendal Pelaporan',
-    field: 'namaRendalPelaporan',
-    thClass: 'text-sm',
-    tdClass: 'text-sm',
-  },
+  // {
+  //   label: 'Rendal Pelaporan',
+  //   field: 'namaRendalPelaporan',
+  //   thClass: 'text-sm',
+  //   tdClass: 'text-sm',
+  // },
   {
     label: 'Unit Kerja PKAU',
     field: 'namaUnitKerjaPkpt',
@@ -134,13 +134,13 @@ const columns = [
     tdClass: 'text-sm',
   },
   {
-    label: 'Bidang Pengawasan',
+    label: 'Bagian/Bidang',
     field: 'namaBidwasPkpt',
     thClass: 'text-sm',
     tdClass: 'text-sm',
   },
   {
-    label: 'TW Pelaporan Kontributor',
+    label: 'TW Pelaporan',
     field: 'triwulan',
     thClass: 'text-sm',
     tdClass: 'text-sm',
