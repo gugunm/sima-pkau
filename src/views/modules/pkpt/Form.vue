@@ -55,7 +55,7 @@
             />
           </div>
         </CRow>
-        <CRow class="mb-4 mt-4" v-if="mode == 'create'">
+        <!-- <CRow class="mb-4 mt-4" v-if="mode == 'create'">
           <div class="col-sm-2">
             <CButton
               type="button"
@@ -68,9 +68,9 @@
               + PKAU
             </CButton>
           </div>
-        </CRow>
+        </CRow> -->
 
-        <div v-if="isOpenForm">
+        <div>
           <CRow class="mb-2">
             <CFormLabel for="tahun" class="col-sm-3 col-form-label"
               >Tahun <span class="text-red-500">*</span></CFormLabel
