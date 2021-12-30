@@ -36,10 +36,10 @@ export const func = {
     // /**
     const nipUserLogin = localStorage.getItem('nipbaru')
     const nipBaru = [
-      // {
-      //   nipBaru: '19980101 202012 1 003',
-      //   nama: 'Gugun Mediamer',
-      // },
+      {
+        nipBaru: '19980101 202012 1 003',
+        nama: 'Gugun Mediamer',
+      },
       {
         nipBaru: '19920916 202012 1 007',
         nama: 'Amzar',

@@ -50,6 +50,7 @@
             Export Excel
           </export-excel>
           <button
+            v-if="selectedJenis.id != 7"
             @click="exportPdf"
             type="button"
             class="ml-1 w-40 text-white bg-blue-500 rounded py-2 cursor-pointer hover:bg-blue-600"
@@ -76,7 +77,7 @@ export default {
   data() {
     return {
       loading: false,
-      selectedJenis: null,
+      selectedJenis: {},
       optionsJenis: [
         {
           id: 1,
@@ -101,6 +102,10 @@ export default {
         {
           id: 6,
           deskripsi: 'PKAU',
+        },
+        {
+          id: 7,
+          deskripsi: 'Sektor - PKAU',
         },
       ],
       selectedUnitKerja: null,
@@ -145,6 +150,10 @@ export default {
           this.loadPkpt()
           this.selectedUnitKerja = this.optionsUnitKerja[0]
           break
+        case 7:
+          this.loadSektorToPkpt()
+          this.selectedUnitKerja = this.optionsUnitKerja[0]
+          break
       }
     },
     selectedUnitKerja: function (val) {
@@ -152,7 +161,8 @@ export default {
         // console.log('DATAA BEFORE FILTER')
         // console.log(this.jsonData.length)
         // this.jsonData = this.jsonDataCopy
-        if (this.selectedJenis.id == 6) {
+        // if (this.selectedJenis.id == 6) {
+        if (this.selectedJenis.id == 6 || this.selectedJenis.id == 7) {
           this.jsonData = this.jsonDataCopy
           this.jsonData = this.jsonData.filter((data) => {
             return data.namaUnitKerjaPkpt == val.alias
