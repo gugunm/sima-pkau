@@ -763,10 +763,10 @@ export default {
           {
             text: data.namaUnitKerjaKap,
           },
-          {
-            text: data.namaRendalPelaporan,
-            alignment: 'center',
-          },
+          // {
+          //   text: data.namaRendalPelaporan,
+          //   alignment: 'center',
+          // },
           {
             text: data.namaUnitKerjaPkpt,
             alignment: 'center',
@@ -809,12 +809,12 @@ export default {
           bold: true,
           alignment: 'center',
         },
-        {
-          text: 'Rendal Pelaporan',
-          fontSize: 10,
-          bold: true,
-          alignment: 'center',
-        },
+        // {
+        //   text: 'Rendal Pelaporan',
+        //   fontSize: 10,
+        //   bold: true,
+        //   alignment: 'center',
+        // },
         {
           text: 'Unit Kerja PKAU',
           fontSize: 10,
@@ -828,13 +828,13 @@ export default {
           alignment: 'center',
         },
         {
-          text: 'Bidang Pengawasan',
+          text: 'Bagian/Bidang',
           fontSize: 10,
           bold: true,
           alignment: 'center',
         },
         {
-          text: 'TW Pelaporan Kontributor',
+          text: 'TW Pelaporan',
           fontSize: 10,
           bold: true,
           alignment: 'center',
@@ -888,7 +888,7 @@ export default {
             table: {
               widths: [
                 // 'auto',
-                'auto',
+                // 'auto',
                 'auto',
                 'auto',
                 'auto',

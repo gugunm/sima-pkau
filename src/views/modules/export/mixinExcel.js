@@ -201,11 +201,11 @@ export default {
         // 'Nama Topik': 'namaTopik',
         'Nama KAP': 'namaKap',
         'PJ KAP': 'namaUnitKerjaKap',
-        'Rendal Pelaporan': 'namaRendalPelaporan',
+        // 'Rendal Pelaporan': 'namaRendalPelaporan',
         'Unit Kerja PKAU': 'namaUnitKerjaPkpt',
         'Nama PKAU': 'namaPkpt',
-        'Bidang Pengawasan': 'namaBidwasPkpt',
-        'TW Pelaporan Kontributor': 'triwulan',
+        'Bagian/Bidang': 'namaBidwasPkpt',
+        'TW Pelaporan': 'triwulan',
       }
 
       /**

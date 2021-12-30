@@ -35,6 +35,7 @@
                 track-by="namaKap"
                 deselectLabel=""
                 selectLabel=""
+                :custom-label="viewSelectSearchKap"
               >
               </VueMultiselect>
             </div>
@@ -130,7 +131,7 @@
               </VueMultiselect>
             </div>
           </CRow>
-          <CRow class="mb-2">
+          <CRow class="mb-3">
             <CFormLabel for="info-pkpt" class="col-sm-3 col-form-label"
               >Hasil Yang Diharapkan<span class="text-red-500"
                 >*</span
@@ -144,7 +145,10 @@
                 v-model="form.infoYangDiharapkan"
                 required
               ></CFormTextarea>
-              <!-- readonly -->
+              <p class="text-sm mt-2 text-red-500">
+                note : pisahkan informasi hasil yang diharapkan dengan titik
+                koma ';'
+              </p>
             </div>
           </CRow>
           <!-- <CRow class="mb-2" v-if="isUnitPkptPerwakilan || isSektorAppd">
@@ -481,7 +485,7 @@ export default {
       form: this.getEmptyForm(),
       submitted: false,
       loading: false,
-      isOpenForm: true,
+      isOpenForm: false,
       editData: {},
       selectedKap: null,
       optionsKap: [],
@@ -686,6 +690,10 @@ export default {
       return `${namaUnitKontributor} - ${
         peranPkpt == 1 ? 'Koordinator Topik' : 'Kontributor Topik'
       }`
+    },
+
+    viewSelectSearchKap({ namaKap, pjKap }) {
+      return `${namaKap} - ${pjKap}`
     },
 
     // addPkptLokal() {
