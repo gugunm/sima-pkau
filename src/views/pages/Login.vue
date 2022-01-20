@@ -135,8 +135,8 @@ export default {
       formIsValid: false,
       isLoading: false,
       error: null,
-      tahun: new Date().getFullYear() + 1,
-      optionsTahun: [2020, 2021, 2022],
+      tahun: new Date().getFullYear(),
+      optionsTahun: [2022],
     }
   },
   methods: {

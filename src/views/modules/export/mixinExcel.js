@@ -294,7 +294,7 @@ export default {
         'Id PKAU': 'idPkpt',
         'Nama PKAU': 'namaPkpt',
         'Unit Kerja PKAU': 'namaUnitKerjaPkpt',
-        'Rendal Pelaporan': 'namaRendalPelaporan',
+        // 'Rendal Pelaporan': 'namaRendalPelaporan',
         'Bidang Pengawasan': 'namaBidwasPkpt',
         RMP: 'namaRmp',
         'TW Pelaporan Kontributor': 'triwulan',

@@ -122,13 +122,13 @@ const routes = [
             path: 'create',
             name: 'Create Kontributor',
             component: () => import('@/views/modules/kontributor/Create.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
           },
           {
             path: 'update/:idKontributor',
             name: 'Update Kontributor',
             component: () => import('@/views/modules/kontributor/Update.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
             props: true,
           },
         ],
@@ -152,13 +152,13 @@ const routes = [
             path: 'create',
             name: 'Create KAP',
             component: () => import('@/views/modules/kap/Create.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
           },
           {
             path: 'update/:idKap',
             name: 'Update KAP',
             component: () => import('@/views/modules/kap/Update.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
             props: true,
           },
         ],
@@ -182,13 +182,13 @@ const routes = [
             path: 'create',
             name: 'Create PKAU',
             component: () => import('@/views/modules/pkpt/Create.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
           },
           {
             path: 'update/:idPkpt',
             name: 'Update PKAU',
             component: () => import('@/views/modules/pkpt/Update.vue'),
-            meta: { requiresAuth: true, restricted: false },
+            meta: { requiresAuth: true, restricted: true },
             props: true,
           },
         ],
@@ -506,14 +506,14 @@ const router = createRouter({
 
 import { func } from '@/globalFunctions'
 
-router.beforeEach(function (to, _, next) {
+router.beforeEach(async function (to, _, next) {
   if (to.meta.requiresAuth && !store.getters.isAuthenticated) {
     // console.log('TOOO')
     // console.log(to)
     next('/login')
   } else if (to.meta.restricted) {
-    console.log('Restricted User To Add')
-    if (func.isNipAllowToAdd()) {
+    // console.log('Restricted User To Add')
+    if (await func.isNipAllowToAdd()) {
       next()
     } else {
       next('/kap')

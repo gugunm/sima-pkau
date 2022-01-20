@@ -8,8 +8,8 @@
       <div
         class="flex mb-3 w-full lg:w-1/2 align-middle justify-start lg:justify-end"
       >
-        <!-- v-if="$func.isNipAllowToAdd()" -->
         <button
+          v-if="isShowForNipKhusus"
           class="text-sm rounded-md tracking-wide bg-green-600 text-white h-10 px-5 hover:bg-green-700 focus:bg-green-700 focus:outline-none"
           @click="$router.push('/kap/create')"
         >
@@ -143,8 +143,8 @@
           </div>
         </template> -->
         <div v-if="props.column.field == 'actions'" class="text-center">
-          <!-- v-if="$func.isNipAllowToAdd()" -->
           <CButton
+            v-if="isShowForNipKhusus"
             color="warning"
             size="sm"
             variant="outline"
@@ -157,8 +157,8 @@
             class="mb-2 w-full"
             >Edit</CButton
           >
-          <!-- v-if="$func.isNipAllowToAdd()" -->
           <CButton
+            v-if="isShowForNipKhusus"
             color="danger"
             size="sm"
             variant="outline"
@@ -245,10 +245,12 @@ export default {
       loading: false,
       isDeleteConfirm: false,
       idToDel: null,
+      isShowForNipKhusus: false,
     }
   },
   async mounted() {
     await this.loadKap()
+    this.isShowForNipKhusus = await this.$func.isNipAllowToAdd()
   },
   methods: {
     async loadKap() {
