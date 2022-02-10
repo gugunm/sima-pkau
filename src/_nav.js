@@ -45,6 +45,17 @@ export default [
     to: '/export',
     icon: 'cil-print',
   },
+  // ::: MENU APPROVAL SURAT TUGAS :::
+  {
+    component: 'CNavTitle',
+    name: 'SURAT TUGAS',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Approval ST',
+    to: '/st',
+    icon: 'cil-notes',
+  },
   // {
   //   component: 'CNavItem',
   //   name: 'Dashboard',

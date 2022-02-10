@@ -199,6 +199,31 @@ const routes = [
         component: () => import('@/views/modules/export/index.vue'),
         meta: { requiresAuth: true },
       },
+      // ::: ROUTE MENU BARU SURAT TUGAS :::
+      {
+        path: '/st',
+        name: 'Approval ST',
+        component: {
+          render() {
+            return h(resolveComponent('router-view'))
+          },
+        },
+        children: [
+          {
+            path: '',
+            name: '',
+            component: () => import('@/views/modules/st/index.vue'),
+            meta: { requiresAuth: true, restricted: false },
+          },
+          {
+            path: 'update/:idSt',
+            name: 'Update ST',
+            component: () => import('@/views/modules/st/Update.vue'),
+            meta: { requiresAuth: true, restricted: false },
+            props: true,
+          },
+        ],
+      },
       /*
       {
         path: '/dashboard',
